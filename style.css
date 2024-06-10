@@ -1,0 +1,22 @@
+form > *{
+    display: block;
+}
+
+nav{
+    height: 10vh;
+}
+
+.main_content{
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.main_content table tr:first-child{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.bottom{
+    height: 10vh;
+}
