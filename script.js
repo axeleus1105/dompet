@@ -35,7 +35,8 @@ function selectData(authToken, filter){
       "collection": collection,
       "database": db,
       "dataSource": "Cluster0",
-      "filter": filter
+      "filter": filter,
+      "sort": {"date": -1}
     })
   })  
     .then(response => response.json())
@@ -69,7 +70,7 @@ function tambahData(authToken, newData) {
         .then(response => response.json())
         .then(data => {
             console.log(data)
-            window.location.href = "/index.html";
+            location.reload();
         })
         .catch(error => {
             console.error('Terjadi kesalahan:', error);
