@@ -15,9 +15,6 @@
 body{
     background-color: var(--b);
     height: 100%;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 15% 75% 10%;
 }
 
 form > *{
@@ -25,6 +22,7 @@ form > *{
 }
 
 nav{
+    max-height: 15%;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
@@ -36,6 +34,7 @@ nav{
 }
 
 .main_content{
+    height: 75%;
     padding: 10px;
     overflow: auto;
 }
@@ -143,6 +142,7 @@ form select{
 }
 
 .bottom{
+    max-height: 10%;
     background-color: white;
     display: flex;
     justify-content: space-evenly;
