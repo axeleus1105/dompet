@@ -14,6 +14,7 @@
 
 body{
     background-color: var(--b);
+    max-height: 100vh;
 }
 
 form > *{
@@ -21,7 +22,7 @@ form > *{
 }
 
 nav{
-    height: 15vh;
+    height: 10vh;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
@@ -33,7 +34,7 @@ nav{
 }
 
 .main_content{
-    height: 75vh;
+    height: 80vh;
     padding: 10px;
     overflow: auto;
 }
