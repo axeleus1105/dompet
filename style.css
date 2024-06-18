@@ -14,7 +14,6 @@
 
 body{
     background-color: var(--b);
-    height: 100%;
 }
 
 form > *{
