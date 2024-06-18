@@ -14,6 +14,9 @@
 
 body{
     background-color: var(--b);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 75% 10%;
 }
 
 form > *{
@@ -23,9 +26,6 @@ form > *{
 nav{
     padding: 10px;
     background-color: #fff;
-    height: 15vh;
-    max-height: 15vh;
-    overflow: hidden;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
 }
 
@@ -37,8 +37,6 @@ nav{
 .main_content{
     padding: 10px;
     overflow: auto;
-    height: 75vh;
-    max-height: 75vh;
 }
 
 .row{
@@ -145,9 +143,6 @@ form select{
 
 .bottom{
     background-color: white;
-    height: 10vh;
-    max-height: 10vh;
-    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, .5);
