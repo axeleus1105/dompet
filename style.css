@@ -15,7 +15,7 @@
 body{
     background-color: var(--b);
     height: 100%;
-    max-height: 100%;
+    width: 100vw;
     display: grid;
     grid-template-rows: 15% 75% 10%;
 }
