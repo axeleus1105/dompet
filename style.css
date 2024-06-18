@@ -14,8 +14,6 @@
 
 body{
     background-color: var(--b);
-    height: 100vh;
-    overflow: hidden;
 }
 
 form > *{
