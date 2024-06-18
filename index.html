@@ -1,68 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dompet</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
     <nav>
-        <h1>testing</h1>
+        <h1>Uang Gue</h1>
+        <div class="uang-gue">
+            <div>
+                <h4>Total Uang</h4>
+                <span class="total-uang">Rp. 0</span>
+            </div>
+            <div>
+                <h4>Pemasukan</h4>
+                <span class="pemasukan">Rp. 0</span>
+            </div>
+            <div>
+                <h4>Pengeluaran</h4>
+                <span class="pengeluaran">Rp. 0</span>
+            </div>
+        </div>
     </nav>
 
     <div class="main_content">
-        <table cellpadding="10" class="dataDisplay">
-            <tr>
-                <!-- <th>id</th> -->
-                <th>tanggal</th>
-                <th>uang</th>
-                <th>source</th>
-                <th>tipe</th>
-                <th>note</th>
-            </tr>
-        </table>
+        <div class="dataDisplay">
+            
+        </div>
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Tambah
-    </button>
-    
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <input type="date" name="" id="date">
-                    <input type="text" name="" id="angka" placeholder="angka">
-                    <select name="" id="source">
-                        <option value="Gopay">Gopay</option>
-                        <option value="Jago">Jago</option>
-                        <option value="Dompet">Dompet</option>
-                    </select>
-                    <select name="" id="tipe">
-                        <option value="income">income</option>
-                        <option value="outcome">outcome</option>
-                    </select>
-                    <input type="text" name="" id="note" placeholder="note">
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn insertBtn btn-primary">submit</button>
-            </div>
-        </div>
-        </div>
+    <div class="bottom">
+        <select name="" id="" class="dataFilter">
+            <option value="01">Jan</option>
+            <option value="02">Feb</option>
+            <option value="03">Mar</option>
+            <option value="04">Apr</option>
+            <option value="05">Mei</option>
+            <option value="06">Jun</option>
+            <option value="07">Jul</option>
+            <option value="08">Agu</option>
+            <option value="09">Sep</option>
+            <option value="10">Okt</option>
+            <option value="11">Nov</option>
+            <option value="12">Des</option>
+        </select>
+        <button data-targetmodal="#insert" class="modal-btn insert-data"><img src="image/plus_white.svg" alt=""></button>
+        <select name="" id="" class="dataFilter">
+            <option value="All">All</option>
+            <option value="Gopay">Gopay</option>
+            <option value="Jago">Jago</option>
+            <option value="Dompet">Dompet</option>
+        </select>
     </div>
+
+    <dialog id="insert">
+        <div class="modal-header">
+            <h2>
+                Insert Data
+            </h2>
+            <button class="close-btn">⨉</button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <h5>Date</h5>
+                <input type="date" name="" id="date" required>
+                <h5>Angka</h5>
+                <input type="text" name="" id="angka" placeholder="angka" required>
+                <h5>Source</h5>
+                <select name="" id="source" required>
+                    <option value="Gopay">Gopay</option>
+                    <option value="Jago">Jago</option>
+                    <option value="Dompet">Dompet</option>
+                </select>
+                <h5>Tipe</h5>
+                <select name="" id="tipe" required>
+                    <option value="income">income</option>
+                    <option value="outcome">outcome</option>
+                </select>
+                <h5>Note</h5>
+                <input type="text" name="" id="note" placeholder="note" required>
+                <button class="insertBtn action-btn">insert</button>
+            </form>
+        </div>
+    </dialog>
+
+    <dialog id="update">
+        <div class="modal-header">
+            <h2>
+                Update Data
+            </h2>
+            <button class="close-btn">⨉</button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <h5>Date</h5>
+                <input type="date" name="" id="date">
+                <h5>Angka</h5>
+                <input type="text" name="" id="angka" placeholder="angka">
+                <h5>Source</h5>
+                <select name="" id="source">
+                    <option value="Gopay">Gopay</option>
+                    <option value="Bank_Jago">Bank Jago</option>
+                    <option value="Dompet">Dompet</option>
+                </select>
+                <h5>Tipe</h5>
+                <select name="" id="tipe">
+                    <option value="income">income</option>
+                    <option value="outcome">outcome</option>
+                </select>
+                <h5>Note</h5>
+                <input type="text" name="" id="note" placeholder="note">
+            </form>
+            <div style="display: flex; gap: 20px;">
+                <button class="deleteBtn action-btn">delete</button>
+                <button class="updateBtn action-btn">update</button>
+            </div>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
+
 </html>
