@@ -39,7 +39,7 @@ nav{
 .main_content{
     padding: 10px;
     overflow: auto;
-    width: 75vh;
+    height: 75vh;
     max-height: 75vh;
 }
 
